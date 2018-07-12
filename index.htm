@@ -1,0 +1,35 @@
+<script src="./libgif.js"></script>
+
+<style>
+canvas {
+  display: block;
+  width:1113px;
+  margin:auto;
+  margin-top: 300px;
+}
+</style>
+<img src="./demo_long_m.gif">
+
+
+
+<script type="text/javascript">
+			let gifs = document.querySelectorAll('img')
+      gifs.forEach((giftag) => {
+        var rub = new SuperGif({ loop_mode:false,gif: giftag, rubbable : true, auto_play : false, progressbar_height:3, progressbar_background_color:'#234', progressbar_foreground_color : "#789"} );
+        rub.load(function(){
+let play = false
+document.onclick = () => {
+  if(play) {
+    rub.pause()
+  } else {
+    rub.play()
+  }
+  play = !play
+}
+
+        })
+      })
+
+
+
+		</script>
